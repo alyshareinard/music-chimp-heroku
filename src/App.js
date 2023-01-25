@@ -72,7 +72,7 @@ const clean_phone = (number) => {
     new_number = "+1-"+new_number.substring(0,3) + '-' + new_number.substring(3,6) + '-' + new_number.substring(6,)
   } else if((new_number.length === 11) & (new_number[0]==='1')){
     new_number = "+1-"+new_number.substring(1,4) + '-' + new_number.substring(4,7) + '-' + new_number.substring(7,)
-  } else {
+  } else if( number.length>0) {
     new_number = "ERROR: "+ number
     console.log("no match")
     console.log(number)
